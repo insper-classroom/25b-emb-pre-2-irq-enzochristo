@@ -13,16 +13,16 @@ const int BTN_PIN_R = 28;
 void btn_callback(uint gpio, uint32_t events) {
   if (events == 0x4) { // fall edge
 
-    printf("btn pressed \n");
+    // printf("btn pressed \n");
     
     while (!gpio_get(BTN_PIN_R)) {
-      sleep_ms(1);
+      // sleep_ms(1);
     }
     
 
     
-    printf("btn released \n");
-    sleep_ms(1);
+    // printf("btn released \n");
+    // sleep_ms(1);
 
 
     // capture_flag = 1;
