@@ -11,6 +11,9 @@ volatile int capture_flag = 1;
 // int btn_flag;
 
 void btn_callback(uint gpio, uint32_t events) {
+
+  // NUNCA usar loops, prints ou sleeps dentro de callbacks. 
+  
   if (events == 0x4) { // fall edge  
    
     // sleep_ms(1);
@@ -45,7 +48,9 @@ int main() {
   // nada no formato true/false. 
 
   // Tampouco precisamos de while, pois como o caso eh automatico, o pull up acontece normalmente
-  // Apenas a variacao do sinal de entrada ja vai fazer com que o callback entre em acao e faca o print. 
+  // Apenas a variacao do sinal de entrada ja vai fazer com que o callback entre em acao. 
+
+  // Como eh possivel ter o print se nao tem print ????????????
 
   // int a;
   // while (1) {
